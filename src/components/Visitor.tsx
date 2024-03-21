@@ -18,8 +18,7 @@ export const Visitor = () => {
     }, []);
     useEffect(() => {
         const incrementCount = async () => {
-            const body = {count}
-            await fetch('/api/increment', {method: 'POST', body: JSON.stringify(body),});
+            await fetch('/api/increment', {method: 'POST'});
         };
 
         incrementCount();
